@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "next-http2-tests",
+  "name": "next-now2-tests",
   "builds": [
     { "src": "next.config.js", "use": "@now/next" }
   ],
@@ -11,8 +11,7 @@
       "continue": true
     },
     
-    
-    { 
+    {
       "src": "/a-route/", 
       "dest": "/"
     },
