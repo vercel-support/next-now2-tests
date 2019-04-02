@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "name": "next-http2-tests",
+  "builds": [
+    { "src": "next.config.js", "use": "@now/next" }
+  ],
+  "routes": [
+    { 
+      "src": "/.*",
+      "headers": {"cache-control": "s-maxage=31536000, maxage=0"},
+      "continue": true
+    },
+    
+    
+    { 
+      "src": "/a-route/", 
+      "dest": "/"
+    },
+    
+    { "src": "/_next/static/(?:[^/]+/pages|chunks|runtime)/.+", "headers": { "cache-control": "immutable" } }
+
+  ]
+}
